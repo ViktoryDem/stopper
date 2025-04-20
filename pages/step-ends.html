@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Step Ends</title>
+  <link rel="stylesheet" href="../css/fraud-game.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="vd-wrapper">
+      <div class="header__row">
+        <div class="aside">
+          <a href="#" class="header__logo">
+            <img src="../img/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header__btns">
+          <a href="#" class="header__log-out">Log Out</a>
+        </div>
+        <div class="balance">
+          <img src="../img/icons/coins.svg" alt="balance">
+          <span>101</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="vd-wrapper main-wrapper">
+    <div class="aside sidebar">
+      <div class="sidebar__sticky-content">
+        <div class="user-widget">
+          <div class="user-widget__photo">
+            <img src="../img/user-photo.jpg" alt="user">
+          </div>
+          <div class="user-widget__name">
+            <span>Jacob</span>
+            <button class="btn_edit-name">
+            </button>
+          </div>
+          <div class="user-widget__balance">
+            <div>Your Balance:</div>
+            <div class="balance">
+              <img src="../img/icons/coins.svg" alt="balance">
+              <span>1080</span>
+            </div>
+          </div>
+
+          <div class="user-widget__row">
+            <div class="user-widget-card">
+              <div class="user-widget-card__title">Credits</div>
+              <div class="user-widget-card__value">336</div>
+            </div>
+            <div class="user-widget-card">
+              <div class="user-widget-card__title">Spil</div>
+              <div class="user-widget-card__value">218</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <a href="#" class="toolbar-item active">
+            <div class="toolbar-item__icon toolbar-item__icon_games"></div>
+            <div class="toolbar-item__text"><span class="hide-on-mob">Alle</span> Spil</div>
+          </a>
+          <a href="#" class="toolbar-item">
+            <div class="toolbar-item__icon toolbar-item__icon_popular"></div>
+            <div class="toolbar-item__text">Populære</div>
+          </a>
+          <a href="#" class="toolbar-item">
+            <div class="toolbar-item__icon toolbar-item__icon_favorites"></div>
+            <div class="toolbar-item__text">Favoritter</div>
+          </a>
+
+          <!-- <a href="#" class="toolbar-item">
+						<div class="toolbar-item__icon toolbar-item__icon_highscore"></div>
+						<div class="toolbar-item__text">Highscore</div>
+					</a>
+					<a href="#" class="toolbar-item">
+						<div class="toolbar-item__icon toolbar-item__icon_prizes"></div>
+						<div class="toolbar-item__text">Prizes</div>
+					</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="main main_without-overflow ">
+      <section class="step-guide steps-ends">
+        <div class="step-guide-header-wrapper steps-ends__title">
+          <div class="step-guide-header">
+            <h2 class="step-guide-header__title ">There are no more steps</h2>
+          </div>
+        </div>
+        <div class="step-guide__text">
+          <p>
+            You have now followed the entire guide to setting up two-factor login for Facebook. Your Facebook account is
+            now much
+            more secure. <b> Give us your feedback</b> on the guide below so we can improve the guide.
+          </p>
+        </div>
+        <form class="guide-feedback-form">
+          <div class="step-guide__title">
+            How helpful was this guide?
+          </div>
+          <div class="radio-feedback">
+            <label class="img-option">
+              <input type="radio" name="option" value="1">
+              <span class="img-option__wrapper">
+                <span class="img-option__content">
+                  <img src="../img/frustrating.png" alt="Frustrating">
+                  <span class="img-option__title">Frustrating</span>
+                  <span class="img-option__text">It didn’t help me at all</span>
+                </span>
+              </span>
+            </label>
+
+            <label class="img-option">
+              <input type="radio" name="option" value="2">
+              <span class="img-option__wrapper">
+                <span class="img-option__content">
+                  <img src="../img/not-helpful.png" alt="Not Helpful">
+                  <span class="img-option__title">Not Helpful</span>
+                  <span class="img-option__text">I struggled to follow the steps</span>
+                </span>
+              </span>
+            </label>
+
+            <label class="img-option">
+              <input type="radio" name="option" value="3">
+              <span class="img-option__wrapper">
+                <span class="img-option__content">
+                  <img src="../img/neutral.png" alt="Neutral">
+                  <span class="img-option__title">Neutral</span>
+                  <span class="img-option__text">It was okay, but could be improved</span>
+                </span>
+              </span>
+            </label>
+
+            <label class="img-option">
+              <input type="radio" name="option" value="4">
+              <span class="img-option__wrapper">
+                <span class="img-option__content">
+                  <img src="../img/helpful.png" alt="Helpful">
+                  <span class="img-option__title">Helpful</span>
+                  <span class="img-option__text">It worked well, but I had some minor issues</span>
+                </span>
+              </span>
+            </label>
+
+            <label class="img-option">
+              <input type="radio" name="option" value="5">
+              <span class="img-option__wrapper">
+                <span class="img-option__content">
+                  <img src="../img/very-helpful.png" alt="Very Helpful">
+                  <span class="img-option__title">Very Helpful</span>
+                  <span class="img-option__text">Everything was clear and easy to follow!</span>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="note">Leave a note about the guide to us <span class="small-txt">(optional)</span></label>
+            <textarea id="note" name="note" placeholder="Write here a note..."></textarea>
+          </div>
+
+          <div class="step-guide__nav">
+            <a href="../pages/step-2.html" class="step-btn step-btn_prev step-btn_light">Back to the steps</a>
+            <button type="submit" class="step-btn step-btn_next">Send</button>
+          </div>
+        </form>
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="popular-guides">
+        <h2 class="popular-guides__title">
+          Other popular guides
+        </h2>
+        <div class="guide-cards">
+          <div class="guide-card">
+            <a href="#" class="guide-card__img">
+              <img src="../img/guide-card-1.jpg" alt="guide image">
+            </a>
+            <div class="guide-card__content">
+              <div class="guide-card__title">How to Enable Two-Factor Authentication (2FA)</div>
+              <div class="guide-card__text">Add an extra layer of security to your Facebook account by enabling
+                Two-Factor Authentication. This ensures that even if
+                someone gets your password, they won’t be able to access your account without a second verification
+                step.</div>
+              <div class="guide-card__nav">
+                <a href="#" class="step-btn step-btn_accent step-btn_next">See guide</a>
+                <a href="#" class="icon-btn video-icon-btn">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <a href="#" class="guide-card__img">
+              <img src="../img/guide-card-2.jpg" alt="guide image">
+            </a>
+            <div class="guide-card__content">
+              <div class="guide-card__title">How to Recognize and Avoid Phishing Scams</div>
+              <div class="guide-card__text">Phishing scams try to trick you into revealing your login details. Learn how
+                to spot fake emails, messages, and websites
+                that pretend to be Facebook and protect your account from fraud.</div>
+              <div class="guide-card__nav">
+                <a href="#" class="step-btn step-btn_accent step-btn_next">See guide</a>
+                <a href="#" class="icon-btn video-icon-btn">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <a href="#" class="guide-card__img">
+              <img src="../img/guide-card-3.jpg" alt="guide image">
+            </a>
+            <div class="guide-card__content">
+              <div class="guide-card__title">How to Spot Suspicious Activities on Your Account</div>
+              <div class="guide-card__text">Unusual logins, unexpected friend requests, or messages you didn’t send?
+                Learn how to recognize suspicious activity and
+                take action before your account is compromised.</div>
+              <div class="guide-card__nav">
+                <a href="#" class="step-btn step-btn_accent step-btn_next">See guide</a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <footer class="vd-footer">
+    <div class="vd-wrapper">
+      <div>
+        <a href="#" class="vd-footer__logo">
+          <img src="../img/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="vd-footer__text">
+        © 2025 PåskeSkrab.dk | HiT Media ApS - Kidholm 12 - 9310 Vodskov - Danmark | <a href="#" target="_blank">Hjælp
+          / Kundeservice</a> | <a href="#" target="_blank">Betingelser</a> | <a href="#"
+          target="_blank">Privatlivspolitik</a>
+
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
