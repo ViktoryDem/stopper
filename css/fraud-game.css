@@ -26,6 +26,13 @@ input {
   line-height: 1;
 }
 
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
 textarea {
   border: none;
   overflow: auto;
@@ -778,6 +785,8 @@ textarea {
   font-size: 14px;
   color: #8b8b8b;
   transition: border 0.3s ease;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
 }
 .custom-dropdown:hover {
   border-color: #888;
@@ -1028,6 +1037,8 @@ a.tips__link-to-guide {
   color: var(--text-color);
   border: 1px solid #fff;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
   transition: all 0.3s;
 }
 .answer__text {
