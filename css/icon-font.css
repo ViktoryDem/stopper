@@ -25,6 +25,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-browser:before {
+  content: "\e912";
+}
+.icon-chrome:before {
+  content: "\e913";
+}
+.icon-firefox:before {
+  content: "\e914";
+}
+.icon-internet:before {
+  content: "\e915";
+}
+.icon-opera:before {
+  content: "\e916";
+}
+.icon-safari:before {
+  content: "\e917";
+}
+.icon-warning:before {
+  content: "\e918";
+}
+.icon-windows:before {
+  content: "\e90d";
+}
+.icon-android:before {
+  content: "\e90e";
+}
+.icon-ios:before {
+  content: "\e90f";
+}
+.icon-mac:before {
+  content: "\e910";
+}
+.icon-unknown-system:before {
+  content: "\e911";
+}
 .icon-checked-new:before {
   content: "\e90c";
 }
