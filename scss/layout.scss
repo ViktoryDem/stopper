@@ -403,8 +403,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  // .toolbar_hide-on-mob
+  &_hide-on-mob {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
   @media (max-width: 767.98px) {
-    z-index: 1;
+    z-index: 2;
     flex-direction: row;
     position: fixed;
     bottom: 0;

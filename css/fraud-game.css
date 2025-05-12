@@ -1,5 +1,5 @@
-@import url("../css/icon-font.css");
-@import url("../css/layout.css");
+@import url("icon-font.css");
+@import url("layout.css");
 :root {
   --dark-color: #263c3c;
   --text-color: #282828;
@@ -123,7 +123,6 @@ textarea {
 
 .step-guide__img {
   width: 100%;
-  max-height: 500px;
   border-radius: 7px;
   overflow: clip;
   margin-bottom: 21px;
@@ -133,7 +132,6 @@ textarea {
     border-radius: 0;
     margin-inline: -16px;
     width: unset;
-    height: 260px;
     margin-bottom: 28px;
   }
 }
@@ -990,6 +988,12 @@ a.tips__link-to-guide {
   font-size: 16px;
   color: var(--text-color);
 }
+.fraud-question a {
+  text-decoration: underline;
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
 .fraud-question__img {
   border-radius: 17px;
   background: #fff;
@@ -1254,6 +1258,7 @@ a.tips__link-to-guide {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
   .answer-status {
@@ -1266,6 +1271,7 @@ a.tips__link-to-guide {
   display: flex;
   gap: 16px;
   align-items: center;
+  flex: 1 1 auto;
 }
 .answer-status__icon {
   font-size: 44px;
@@ -1342,6 +1348,9 @@ a.tips__link-to-guide {
   color: var(--dark-color);
   margin-bottom: 40px;
 }
+.test-result__title.failed {
+  color: #8f312c;
+}
 
 .test-list {
   padding-left: 12px;
@@ -1388,7 +1397,7 @@ a.tips__link-to-guide {
   color: var(--light-btn-color);
 }
 .test-item__status:after {
-  content: "\e918";
+  content: "\e901";
   font-family: "icomoon";
   position: relative;
 }
@@ -1434,20 +1443,15 @@ a.tips__link-to-guide {
   color: var(--dark-color);
   margin-bottom: 14px;
 }
-
-.test-result_good .test-item__status:after {
+.test-item.passed .test-item__status:after {
   content: "\e901";
   color: #a5cc9c;
 }
-
-.test-result_bad .test-result__title {
-  color: #8f312c;
-}
-.test-result_bad .test-item__status:after {
+.test-item.failed .test-item__status:after {
   content: "\e918";
   color: #8f312c;
 }
-.test-result_bad .test-item__content {
+.test-item.failed .test-item__content {
   background-color: #fff1ee;
 }
 

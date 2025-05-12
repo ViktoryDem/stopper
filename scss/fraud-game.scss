@@ -1,5 +1,5 @@
-@import url("../css/icon-font.css");
-@import url("../css/layout.css");
+@import url("icon-font.css");
+@import url("layout.css");
 :root {
   // --main-color: #dc7052;
   // --accent-color: #ed5e36;
@@ -120,7 +120,6 @@ textarea {
   // .step-guide__img
   &__img {
     width: 100%;
-    max-height: 500px;
     border-radius: 7px;
     overflow: clip;
     margin-bottom: 21px;
@@ -128,7 +127,6 @@ textarea {
       border-radius: 0;
       margin-inline: -16px;
       width: unset;
-      height: 260px;
       margin-bottom: 28px;
     }
     img {
@@ -944,6 +942,12 @@ a.tips__link-to-guide {
     font-size: 16px;
     color: var(--text-color);
   }
+  a {
+    text-decoration: underline;
+    color: var(--accent-color);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
   // .fraud-question__img
   &__img {
     border-radius: 17px;
@@ -1212,6 +1216,7 @@ a.tips__link-to-guide {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
+  flex-wrap: wrap;
   @media (max-width: 767.98px) {
     margin: 16px;
     padding: 16px;
@@ -1222,6 +1227,7 @@ a.tips__link-to-guide {
     display: flex;
     gap: 16px;
     align-items: center;
+    flex: 1 1 auto;
   }
   // .answer-status__icon
   &__icon {
@@ -1307,6 +1313,9 @@ a.tips__link-to-guide {
     font-size: 27px;
     color: var(--dark-color);
     margin-bottom: 40px;
+    &.failed {
+      color: #8f312c;
+    }
   }
 }
 
@@ -1348,10 +1357,9 @@ a.tips__link-to-guide {
     flex: 0 0 32px;
     color: var(--light-btn-color);
     &:after {
-      content: "\e918";
+      content: "\e901";
       font-family: "icomoon";
       position: relative;
-      // top: 1px;
     }
   }
 
@@ -1402,33 +1410,24 @@ a.tips__link-to-guide {
     color: var(--dark-color);
     margin-bottom: 14px;
   }
-}
-.test-result_good {
-  .test-item__status {
-    &:after {
-      content: "\e901";
-      color: #a5cc9c;
-      // font-family: "icomoon";
-      // position: relative;
-      // top: 1px;
+  &.passed {
+    .test-item__status {
+      &:after {
+        content: "\e901";
+        color: #a5cc9c;
+      }
     }
   }
-}
-.test-result_bad {
-  .test-result__title {
-    color: #8f312c;
-  }
-  .test-item__status {
-    &:after {
-      content: "\e918";
-      color: #8f312c;
-      // font-family: "icomoon";
-      // position: relative;
-      // top: 1px;
+  &.failed {
+    .test-item__status {
+      &:after {
+        content: "\e918";
+        color: #8f312c;
+      }
     }
-  }
-  .test-item__content {
-    background-color: #fff1ee;
+    .test-item__content {
+      background-color: #fff1ee;
+    }
   }
 }
 
