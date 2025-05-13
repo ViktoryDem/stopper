@@ -31,10 +31,16 @@ html {
   font-size: 14px;
 }
 
+html,
+body {
+  height: 100dvh;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--page-bg-color);
   overflow-x: clip;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
