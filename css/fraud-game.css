@@ -988,7 +988,7 @@ a.tips__link-to-guide {
   font-size: 16px;
   color: var(--text-color);
 }
-.fraud-question a {
+.fraud-question a:not([class*=btn]) {
   text-decoration: underline;
   color: var(--accent-color);
   font-weight: 600;
@@ -1271,7 +1271,7 @@ a.tips__link-to-guide {
   display: flex;
   gap: 16px;
   align-items: center;
-  flex: 1 1 auto;
+  flex: 1 1 50%;
 }
 .answer-status__icon {
   font-size: 44px;

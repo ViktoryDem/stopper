@@ -64,7 +64,6 @@ body {
   flex: auto;
   width: 100%;
   display: flex;
-  padding-top: 60px;
 }
 @media (max-width: 767.98px) {
   .main-wrapper {
@@ -122,7 +121,8 @@ body {
 .header {
   box-shadow: 0 3px 9px 0 rgba(83, 42, 31, 0.1);
   background: var(--header-bg-color);
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
