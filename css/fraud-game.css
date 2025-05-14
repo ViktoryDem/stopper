@@ -1031,7 +1031,10 @@ a.tips__link-to-guide {
   }
 }
 
-.answer {
+.answer,
+.answer-test,
+.answer-replace,
+.answer-timeout {
   border-radius: 7px;
   box-shadow: 0 0 7px 0 rgba(43, 70, 76, 0.06);
   background: #fff;
@@ -1045,11 +1048,17 @@ a.tips__link-to-guide {
   outline: none !important;
   transition: all 0.3s;
 }
-.answer__text {
+.answer__text,
+.answer-test__text,
+.answer-replace__text,
+.answer-timeout__text {
   display: flex;
   gap: 12px;
 }
-.answer__text:before {
+.answer__text:before,
+.answer-test__text:before,
+.answer-replace__text:before,
+.answer-timeout__text:before {
   content: "";
   display: block;
   flex: 0 0 24px;
@@ -1059,17 +1068,26 @@ a.tips__link-to-guide {
   background-color: var(--page-bg-color);
 }
 @media (hover: hover) {
-  .answer:hover {
+  .answer:hover,
+.answer-test:hover,
+.answer-replace:hover,
+.answer-timeout:hover {
     border: 1px solid var(--accent-color);
     box-shadow: 0 3px 13px 0 rgba(35, 47, 50, 0.26);
   }
 }
-.answer.selected {
+.answer.selected,
+.answer-test.selected,
+.answer-replace.selected,
+.answer-timeout.selected {
   border: 1px solid var(--accent-color);
   background: #fff1ee;
   box-shadow: none;
 }
-.answer.selected .answer__text:before {
+.answer.selected .answer__text:before,
+.answer-test.selected .answer__text:before,
+.answer-replace.selected .answer__text:before,
+.answer-timeout.selected .answer__text:before {
   content: "\e905";
   font-family: "icomoon";
   color: #fff;

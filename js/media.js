@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
       showPopup(isCorrect, option.getAttribute("data-url"));
     });
   });
+
+  // Initialize quiz answer selection testing
+  document.querySelectorAll(".answer-replace").forEach((option) => {
+    option.addEventListener("click", () => {
+      option.classList.add("selected");
+
+      const isCorrect = option.getAttribute("data-correct") === "true";
+      showPopupTest(isCorrect, option.getAttribute("data-url"));
+    });
+  });
+
+  // задержка
+  document.querySelectorAll(".answer-timeout").forEach((option) => {
+    option.addEventListener("click", () => {
+      option.classList.add("selected");
+
+      const isCorrect = option.getAttribute("data-correct") === "true";
+      showPopupTimeout(isCorrect, option.getAttribute("data-url"));
+    });
+  });
 });
 
 function playAudio() {
@@ -134,6 +154,78 @@ function showPopup(isCorrect, url) {
   //   window.location.href = redirectUrl;
   // }, 1000);
   setTimeout(() => {
-    window.location.href = url;
+    if (!url) {
+      window.location.href = "../pages/correct-choice.html";
+      // window.location.replace("../pages/correct-choice.html");
+    } else {
+      window.location.href = url;
+      // window.location.replace(url);
+    }
+  }, 1000);
+}
+
+function showPopupTest(isCorrect, url) {
+  const popupBg = document.querySelector(".popup-wrapper");
+  const popup = document.querySelector(".popup");
+  const icon = popup?.querySelector(".popup__icon");
+  const text = popup?.querySelector(".popup__text");
+
+  if (!popupBg || !popup || !icon || !text) return;
+
+  popup.classList.remove("correct", "wrong");
+  popup.classList.add(isCorrect ? "correct" : "wrong");
+  icon.className =
+    "popup__icon " + (isCorrect ? "icon-checked-new" : "icon-close");
+  text.textContent = isCorrect ? "Correct choice" : "Wrong choice";
+  popupBg.classList.add("active");
+
+  // setTimeout(() => {
+  //   const redirectUrl = isCorrect
+  //     ? "../pages/correct-choice.html"
+  //     : "../pages/wrong-choice.html";
+  //   window.location.href = redirectUrl;
+  // }, 1000);
+  setTimeout(() => {
+    if (!url) {
+      // window.location.href = "../pages/correct-choice.html";
+      window.location.replace("../pages/correct-choice.html");
+    } else {
+      // window.location.href = url;
+      window.location.replace(url);
+    }
+  }, 1000);
+}
+
+function showPopupTimeout(isCorrect, url) {
+  const popupBg = document.querySelector(".popup-wrapper");
+  const popup = document.querySelector(".popup");
+  const icon = popup?.querySelector(".popup__icon");
+  const text = popup?.querySelector(".popup__text");
+
+  if (!popupBg || !popup || !icon || !text) return;
+
+  popup.classList.remove("correct", "wrong");
+  popup.classList.add(isCorrect ? "correct" : "wrong");
+  icon.className =
+    "popup__icon " + (isCorrect ? "icon-checked-new" : "icon-close");
+  text.textContent = isCorrect ? "Correct choice" : "Wrong choice";
+  popupBg.classList.add("active");
+
+  setTimeout(() => {
+    if (!url) {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          window.location.href = "../pages/correct-choice.html";
+        }, 100);
+      }, 50);
+    } else {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          window.location.replace(url);
+        }, 100);
+      }, 50);
+    }
   }, 1000);
 }

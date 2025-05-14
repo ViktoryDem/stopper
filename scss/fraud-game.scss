@@ -988,7 +988,10 @@ a.tips__link-to-guide {
     padding-inline: 16px;
   }
 }
-.answer {
+.answer,
+.answer-test,
+.answer-replace,
+.answer-timeout {
   border-radius: 7px;
   box-shadow: 0 0 7px 0 rgba(43, 70, 76, 0.06);
   background: #fff;

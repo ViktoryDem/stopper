@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Correct Choice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Audio format</title>
   <link rel="stylesheet" href="../css/fraud-game.css">
 </head>
 
@@ -88,42 +86,59 @@
       </div>
     </div>
     <div class="main main_without-overflow">
-      <div class="answer-status answer-status_wrong">
-        <div class="answer-status__text"><span class="answer-status__icon icon-close-circle-filled"></span>
-          <span>Wrong choice</span>
-        </div>
-        <a href="game-image-format.html" class="step-btn step-btn_next">Next</a>
-      </div>
+      <div class="fraud-game">
+        <div class="fraud-question">
+          <div class="fraud-question__audio">
+            <div id="playPause" class="play-pause-btn">
+              <span id="play" class="icon-play">
+              </span>
+              <span id="pause" style="display: none" class="icon-pause-light">
+              </span>
+            </div>
+            <div id="audio-track" class="audio-track" data-source="../media/audio-1.mp3"></div>
 
-      <div class="fraud-question fraud-question_explanation">
-        <p>
-          Phishing emails are one of the most common types of online fraud. Cybercriminals design these emails to look
-          like
-          official messages from trusted companies, such as Visa, in an attempt to steal your personal information.
-          However,
-          legitimate organizations will never ask you to verify your account or provide sensitive data through an email
-          link. By
-          reporting the email as spam, you help email providers identify and block similar scams, protecting yourself
-          and others
-          from potential fraud.
-        </p>
-        <p>Deleting the email immediately ensures you don’t accidentally interact with it in the future. Even opening a
-          phishing
-          email repeatedly can be risky, as some scams use hidden tracking pixels to detect active email accounts. The
-          safest
-          approach is to avoid clicking any links, never downloading attachments from unknown senders, and always
-          verifying
-          information directly on the official website of the company in question.</p>
-        <div class="fraud-question__img">
-          <img src="../img/question-image.jpg" alt="image">
+            <div class="time-readout">00:00</div>
+          </div>
+          <div class="fraud-question__title">Phishing Email Scam</div>
+          <div class="fraud-question__text">
+            You just received this soundclip claiming to be from Visa, asking you to verify your account by clicking the
+            link. The
+            email looks official, but something feels off. What do you do?
+          </div>
         </div>
-        <div class="txt-center">
-          <a href="game-image-format.html" class="step-btn step-btn_next">Next</a>
-        </div>
-      </div>
 
-      <div class="pause-game">
-        <a href="#" class="step-btn step-btn_light step-btn_pause">Pause / Stop Game</a>
+        <div class="fraud-answers">
+          <a href="correct-choice.html" class="answer-test">
+            <div class="answer__text">Переход по ссылке</div>
+          </a>
+          <div class="answer" data-correct="true">
+            <div class="answer__text">Переход по ссылке указанной в джс</div>
+          </div>
+          <div class="answer" data-correct="false" data-url="correct-choice.html">
+            <div class="answer__text">Переход по дата атрибуту</div>
+          </div>
+
+          <div class="answer-replace" data-correct="false" data-url="correct-choice.html">
+            <div class="answer__text">переход через реплейс ссылки</div>
+          </div>
+          <div class="answer-replace" data-correct="false">
+            <div class="answer__text">переход через реплейс по ссылке указанной в джс</div>
+          </div>
+          <!-- <div class="answer" data-correct="false" data-url="wrong-choice.html">
+            <div class="answer__text">Call the phone number provided in the email to check</div>
+          </div> -->
+
+          <div class="answer-timeout" data-correct="false">
+            <div class="answer__text">задержка перед переходом через location.href </div>
+          </div>
+          <div class="answer-timeout" data-correct="false" data-url="correct-choice.html">
+            <div class="answer__text">задержка перед переходом через location.replace</div>
+          </div>
+        </div>
+
+        <div class="pause-game">
+          <a href="#" class="step-btn step-btn_light step-btn_pause">Pause / Stop Game</a>
+        </div>
       </div>
     </div>
   </div>
@@ -141,8 +156,14 @@
 
       </div>
     </div>
-  </footer>
 
+  </footer>
+  <script>
+    let redirectUrlCorrect = "../pages/correct-choice.html";
+    let redirectUrlWrong = "../pages/wrong-choice.html";
+  </script>
+  <script src="../js/wavesurfer.min.js"></script>
+  <script src="../js/media.js"></script>
 </body>
 
 </html>
