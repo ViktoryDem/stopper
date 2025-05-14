@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       option.classList.add("selected");
 
       const isCorrect = option.getAttribute("data-correct") === "true";
-      showPopup(isCorrect);
+      showPopup(isCorrect, option.getAttribute("data-url"));
     });
   });
 });
@@ -112,7 +112,7 @@ function playVideo() {
   });
 }
 
-function showPopup(isCorrect) {
+function showPopup(isCorrect, url) {
   const popupBg = document.querySelector(".popup-wrapper");
   const popup = document.querySelector(".popup");
   const icon = popup?.querySelector(".popup__icon");
@@ -127,10 +127,13 @@ function showPopup(isCorrect) {
   text.textContent = isCorrect ? "Correct choice" : "Wrong choice";
   popupBg.classList.add("active");
 
+  // setTimeout(() => {
+  //   const redirectUrl = isCorrect
+  //     ? "../pages/correct-choice.html"
+  //     : "../pages/wrong-choice.html";
+  //   window.location.href = redirectUrl;
+  // }, 1000);
   setTimeout(() => {
-    const redirectUrl = isCorrect
-      ? "../pages/correct-choice.html"
-      : "../pages/wrong-choice.html";
-    window.location.href = redirectUrl;
+    window.location.href = url;
   }, 1000);
 }
